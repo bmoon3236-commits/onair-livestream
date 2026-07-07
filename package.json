@@ -1,0 +1,16 @@
+{
+  "name": "onair-livestream",
+  "version": "1.0.0",
+  "description": "Site de live streaming vidéo original (WebRTC) avec comptes, chat et réactions.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "socket.io": "^4.7.5",
+    "bcryptjs": "^2.4.3",
+    "uuid": "^9.0.1"
+  }
+}

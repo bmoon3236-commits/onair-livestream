@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OnAir — Live streaming</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand display"><span class="tally"></span> OnAir</div>
+  <nav>
+    <button class="btn btn-primary" id="goLiveBtn">Démarrer un live</button>
+    <div class="userchip hidden" id="userChip"></div>
+    <button class="btn btn-ghost" id="loginBtn">Connexion</button>
+  </nav>
+</div>
+
+<div class="container">
+  <div class="hero">
+    <h1 class="display">En direct maintenant</h1>
+    <p>Un site de streaming vidéo original — comptes, chat en direct, réactions. Aucun achat, aucun jeton.</p>
+  </div>
+
+  <div class="grid" id="streamGrid"></div>
+  <div class="empty hidden" id="emptyState">Aucun live en cours pour l'instant. Sois le premier à en lancer un.</div>
+</div>
+
+<!-- Auth modal -->
+<div class="overlay hidden" id="authOverlay">
+  <div class="modal">
+    <h2 id="authTitle">Connexion</h2>
+    <div class="field">
+      <label>Nom d'utilisateur</label>
+      <input id="authUsername" type="text" autocomplete="username">
+    </div>
+    <div class="field">
+      <label>Mot de passe</label>
+      <input id="authPassword" type="password" autocomplete="current-password">
+    </div>
+    <div class="modal-error" id="authError"></div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" id="authCancel" style="flex:1">Annuler</button>
+      <button class="btn btn-primary" id="authSubmit" style="flex:1">Se connecter</button>
+    </div>
+    <div class="switch-link">
+      <span id="switchText">Pas encore de compte ?</span>
+      <button id="switchBtn">Créer un compte</button>
+    </div>
+  </div>
+</div>
+
+<script src="/js/auth.js"></script>
+<script src="/js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live — OnAir</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <a href="/" class="brand display" style="text-decoration:none"><span class="tally"></span> OnAir</a>
+</div>
+
+<div class="container">
+  <div id="watchPanel">
+    <div class="stage-layout">
+      <div>
+        <div class="video-wrap">
+          <video id="remoteVideo" autoplay playsinline></video>
+          <div class="onair-badge"><span class="dot"></span> ON AIR</div>
+          <div class="viewer-count-badge" id="viewerCountBadge">0 spectateur</div>
+          <div class="reaction-layer" id="reactionLayer"></div>
+        </div>
+        <div class="reaction-bar">
+          <button class="reaction-btn" data-emoji="❤️">❤️</button>
+          <button class="reaction-btn" data-emoji="🔥">🔥</button>
+          <button class="reaction-btn" data-emoji="👏">👏</button>
+          <button class="reaction-btn" data-emoji="😂">😂</button>
+          <button class="reaction-btn" data-emoji="😮">😮</button>
+        </div>
+      </div>
+
+      <div class="side-panel">
+        <div class="head">Chat en direct</div>
+        <div class="chat-log" id="chatLog"></div>
+        <form class="chat-form" id="chatForm">
+          <input id="chatInput" placeholder="Écrire un message..." maxlength="300" autocomplete="off">
+          <button class="btn btn-primary" type="submit">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="endedPanel" class="hidden ended-banner">
+    <h2 class="display">Ce live est terminé</h2>
+    <a href="/" class="btn btn-primary">Voir d'autres lives</a>
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/watch.js"></script>
+</body>
+</html>
